@@ -26,3 +26,12 @@ const twoSum1 = (nums, target) => {
     loop++;
   }
 }
+
+const twoSum2 = (nums, target) => {
+  const map = {};
+  for (let i = 0; i < nums.length; i++) {
+    let num = target - nums[i];
+    if (map[num] != undefined) return [map[num], i];
+    map[num] = i;
+  }
+}
